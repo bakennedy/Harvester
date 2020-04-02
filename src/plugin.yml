@@ -1,5 +1,5 @@
 name: Harvester
-version: 1.0.0
+version: 1.1.0
 main: io.github.safyre.harvester.Harvester
 api-version: 1.13
 authors: [Safyre]

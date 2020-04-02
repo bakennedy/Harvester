@@ -15,6 +15,7 @@ import java.util.logging.Logger;
 public final class Harvester extends JavaPlugin {
 
 	static final ArrayList<Material> CROPS = new ArrayList<>();
+	static final ArrayList<Material> TALL_CROPS = new ArrayList<>();
 	static FileConfiguration config;
 	private static Logger logger;
 	private static final String PREFIX = "[Harvester] ";
@@ -30,17 +31,18 @@ public final class Harvester extends JavaPlugin {
 				Material.POTATOES,
 				Material.MELON,
 				Material.PUMPKIN,
-				Material.NETHER_WART
+				Material.NETHER_WART,
+				Material.COCOA
+		));
+		TALL_CROPS.addAll(Arrays.asList(
+				Material.BAMBOO,
+				Material.CACTUS,
+				Material.SUGAR_CANE
 		));
 		saveDefaultConfig();
 		config = getConfig();
 		getServer().getPluginManager().registerEvents(new HarvestListener(), this);
 		logger = getServer().getLogger();
-	}
-
-	@Override
-	public void onDisable() {
-		// Plugin shutdown logic
 	}
 
 	public static void fireEvent(Event event){
