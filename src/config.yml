@@ -1,0 +1,2 @@
+#Is the harvester.harvest permission required to harvest crops with right click
+permission-required: false
