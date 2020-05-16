@@ -32,7 +32,12 @@ public class HarvestListener implements Listener {
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
         if (event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-            if (event.getPlayer().getInventory().getItemInMainHand().getType().equals(Material.AIR) && event.getPlayer().getInventory().getItemInOffHand().getType().equals(Material.AIR)) {
+            Material mainHand = event.getPlayer().getInventory().getItemInMainHand().getType();
+            if (mainHand.equals(Material.WOODEN_HOE) ||
+                mainHand.equals(Material.STONE_HOE) ||
+                mainHand.equals(Material.IRON_HOE) ||
+                mainHand.equals(Material.DIAMOND_HOE) ||
+                mainHand.equals(Material.AIR) && event.getPlayer().getInventory().getItemInOffHand().getType().equals(Material.AIR)) {
                 try {
                     Block block = event.getClickedBlock();
                     BlockData blockData = block.getBlockData();
