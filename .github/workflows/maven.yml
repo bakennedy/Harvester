@@ -22,3 +22,8 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Jar
+      uses: work/Harvester/Harvester/target/harvester-1.0-SNAPSHOT-shaded.jar
+      with:
+        name: jar
+        path: output/test/harvester-1.0-SNAPSHOT-shaded.jar
