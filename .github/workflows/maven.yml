@@ -26,5 +26,5 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: jar
-        path: /home/runner/work/Harvester/Harvester/target/harvester-1.0-SNAPSHOT-shaded.jar
+        path: target/harvester-1.0-SNAPSHOT-shaded.jar
        
